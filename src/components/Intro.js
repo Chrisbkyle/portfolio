@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import Description from './Descripton'
 import Projects from './Projects';
 import Contact from './Contact';
-
+import Chris from '../resources/Chris.png'
 
 export default function Intro() {
 
@@ -13,13 +13,13 @@ export default function Intro() {
     const pageRender = () => {
         if(nav == 'desc') {
             console.log(nav)
-            return <Description className='text'/>
+            return <Description/>
         } else if(nav == 'proj') {
             console.log(nav)
-            return <Projects className='text'/>
+            return <Projects/>
         } else if(nav =='contact') {
             console.log(nav)
-            return <Contact className='text'/>
+            return <Contact/>
         } else {
             return
         }
@@ -55,8 +55,8 @@ export default function Intro() {
                     <div>Hello, My Name is Chris Kyle,</div>
                     <div> Welcome to my Portfolio Page</div>
                 </div>
-                <div className='image'></div>
-                <div className={`description ${clicked ? 'description-expanded' : ''}`}>
+                <div className='image'><img src={Chris} className={`profile-pic ${clicked ? 'pic-expand': ''}`}></img></div>
+                <div className={`content ${clicked ? 'content-expanded' : ''}`}>
                     {pageRender()}
                     <div className='button-holder'>
                         <button className='navButton' value='desc' onClick={e => handleNav(e)}>Description</button>
