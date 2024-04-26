@@ -5,6 +5,7 @@ export default function Description() {
         <div className='text'>
             <div>A passionate, hard-working creator</div>
             <div>I'm a certified Salesforce Admin, and a React Developer</div>
+            <div>There will be more to add in later this is mostly placeholder</div>
         </div>
     )
 }

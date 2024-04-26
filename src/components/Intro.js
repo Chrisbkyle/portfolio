@@ -8,10 +8,11 @@ export default function Intro() {
 
     let [clicked,setClicked] = useState(false);
     let [expandChar, setExpandChar] = useState('+')
-    let [nav, setNav] = useState('desc')
+    let [nav, setNav] = useState('about')
+    let [testState, setTestState] = useState(<div></div>)
 
     const pageRender = () => {
-        if(nav == 'desc') {
+        if(nav == 'about') {
             console.log(nav)
             return <Description/>
         } else if(nav == 'proj') {
@@ -25,9 +26,24 @@ export default function Intro() {
         }
     }
 
+
+
     useEffect(() => {
         pageRender()
-    }, [nav])
+        if(clicked) {
+            setTimeout(() => {
+                setTestState(                    
+                    <div className={`button-holder ${clicked ? '' : 'hide'}`}>
+                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='about' onClick={e => handleNav(e)}>About Me</button>
+                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='proj' onClick={e => handleNav(e)}>Projects</button>
+                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value={nav} onClick={e => handleNav(e)}>Salesforce</button>
+                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='contact' onClick={e => handleNav(e)}>Contact</button>
+                    </div>)
+            }, '250')
+        } else {
+            setTestState(<div></div>)
+        }
+    }, [nav, clicked])
 
     const handleClick = () => {
         if(!clicked) {
@@ -60,12 +76,13 @@ export default function Intro() {
                 {/* </div> */}
                 <div className={`content ${clicked ? 'content-expanded' : ''}`}>
                     {pageRender()}
-                    <div className='button-holder'>
-                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='desc' onClick={e => handleNav(e)}>Description</button>
+                    {/* <div className={`button-holder ${clicked ? '' : 'hide'}`}>
+                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='about' onClick={e => handleNav(e)}>About Me</button>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='proj' onClick={e => handleNav(e)}>Projects</button>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value={nav} onClick={e => handleNav(e)}>Salesforce</button>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='contact' onClick={e => handleNav(e)}>Contact</button>
-                    </div>
+                    </div> */}
+                    {testState}
                 </div>
             </div>
         </>
