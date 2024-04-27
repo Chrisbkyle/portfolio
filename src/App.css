@@ -105,7 +105,8 @@ html {
   transition-duration: 1s;
 }
 .button-holder {
-  display: flex;
+  display: none;
+  width: 50px;
   gap: 50px;
   transition-duration: .5s;
   transition-delay: 1s;
@@ -139,8 +140,7 @@ html {
 .text {
   height: 400px;
 }
-.hide {
-  transition-delay: 1s;
-  width: 0px;
-  display:none;
+.flex {
+  display: flex;
+  width: 750px;
 }

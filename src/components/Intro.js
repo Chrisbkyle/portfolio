@@ -29,17 +29,17 @@ export default function Intro() {
 
 
     useEffect(() => {
-        pageRender()
+        // pageRender()
         if(clicked) {
             setTimeout(() => {
                 setTestState(                    
-                    <div className={`button-holder ${clicked ? '' : 'hide'}`}>
+                    <div className={`button-holder ${clicked ? 'flex' : ''}`}>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='about' onClick={e => handleNav(e)}>About Me</button>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='proj' onClick={e => handleNav(e)}>Projects</button>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value={nav} onClick={e => handleNav(e)}>Salesforce</button>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='contact' onClick={e => handleNav(e)}>Contact</button>
                     </div>)
-            }, '250')
+            }, '300')
         } else {
             setTestState(<div></div>)
         }
@@ -71,17 +71,10 @@ export default function Intro() {
                     <div>Hello, My Name is Chris Kyle,</div>
                     <div> Welcome to my Portfolio Page</div>
                 </div>
-                {/* <div className='imageCont'> */}
-                    <img src={Chris} className={`profile-pic ${clicked ? 'pic-expand': ''}`}></img>
-                {/* </div> */}
+                <img src={Chris} className={`profile-pic ${clicked ? 'pic-expand': ''}`}></img>
+
                 <div className={`content ${clicked ? 'content-expanded' : ''}`}>
                     {pageRender()}
-                    {/* <div className={`button-holder ${clicked ? '' : 'hide'}`}>
-                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='about' onClick={e => handleNav(e)}>About Me</button>
-                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='proj' onClick={e => handleNav(e)}>Projects</button>
-                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value={nav} onClick={e => handleNav(e)}>Salesforce</button>
-                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='contact' onClick={e => handleNav(e)}>Contact</button>
-                    </div> */}
                     {testState}
                 </div>
             </div>
