@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from "react";
+import SlideOne from "./SlideOne";
+import SlideTwo from "./SlideTwo";
 
 export default function Projects() {
     let [slide, setSlide] = useState(0)
@@ -35,11 +37,16 @@ export default function Projects() {
  
     return(
         <div className='text'>
-            <div>Projects will go here</div>
-            <div style={{display: 'flex', flexDirection: 'row'}}>
+            {/* <div>Projects will go here</div> */}
+            <div>
+                {/* <div className='rotate-container'>
+                    <div className='rotate'>{data[slide].name}</div>
+                </div>
                 <button value='left' onClick={e => handleLeftNav(e)}>left</button>
-                {data[slide].name}
                 <button value='right' onClick={e => handleRightNav(e)}>right</button>
+                <div>slide is {slide}</div> */}
+                <SlideOne />
+                <SlideTwo />
             </div>
         </div>
     )

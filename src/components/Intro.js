@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Description from './Descripton'
 import Projects from './Projects';
-import Contact from './Contact';
+import Links from './Links';
 import Chris from '../resources/Chris.png'
 
 export default function Intro() {
@@ -11,16 +11,16 @@ export default function Intro() {
     let [nav, setNav] = useState('about')
     let [testState, setTestState] = useState(<div></div>)
 
-    const pageRender = () => {
+    const pageRender = (props) => {
         if(nav == 'about') {
             console.log(nav)
-            return <Description/>
+            return <Description clicked={props}/>
         } else if(nav == 'proj') {
             console.log(nav)
-            return <Projects/>
+            return <Projects />
         } else if(nav =='contact') {
             console.log(nav)
-            return <Contact/>
+            return <Links clicked={props}/>
         } else {
             return
         }
@@ -37,7 +37,7 @@ export default function Intro() {
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='about' onClick={e => handleNav(e)}>About Me</button>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='proj' onClick={e => handleNav(e)}>Projects</button>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value={nav} onClick={e => handleNav(e)}>Salesforce</button>
-                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='contact' onClick={e => handleNav(e)}>Contact</button>
+                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='contact' onClick={e => handleNav(e)}>Links</button>
                     </div>)
             }, '300')
         } else {
@@ -74,7 +74,7 @@ export default function Intro() {
                 <img src={Chris} className={`profile-pic ${clicked ? 'pic-expand': ''}`}></img>
 
                 <div className={`content ${clicked ? 'content-expanded' : ''}`}>
-                    {pageRender()}
+                    {pageRender(clicked)}
                     {testState}
                 </div>
             </div>
