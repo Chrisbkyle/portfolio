@@ -157,16 +157,25 @@ html {
   line-height: 50px;
   height: 480px;
 }
+.slider-grid-container {
+  overflow-x: hidden;
+  width: 1000px;
+  height: 480px;
+  overscroll-behavior-inline: contain;
+}
+.slider-grid {
+  display: grid;
+  grid-auto-flow: column;
+}
 .project-slide {
   z-index: 1;
   position: relative;
-  width: 1100px;
+  width: 1000px;
   height: 450px;
   display: grid;
   gap: 1px;
   grid-template-columns: repeat(9, 11%);
   grid-template-rows: repeat(9, 11%);
-  box-shadow: 4px 4px;
   border-radius: 5px;
 }
 .photo-portrait {
