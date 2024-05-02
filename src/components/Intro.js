@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import Description from './Descripton'
 import Projects from './Projects';
 import Links from './Links';
+import Salesforce from "./Salesforce";
 import Chris from '../resources/Chris.png'
 
 export default function Intro() {
@@ -15,9 +16,13 @@ export default function Intro() {
         if(nav == 'about') {
             // console.log(nav)
             return <Description clicked={props}/>
-        } else if(nav == 'proj') {
+        } 
+        // else if (nav == 'sales') {
+        //     return <Salesforce clicked={props}/>  
+        // } 
+        else if(nav == 'proj') {
             // console.log(nav)
-            return <Projects />
+            return <Projects clicked={props}/>
         } else if(nav =='contact') {
             // console.log(nav)
             return <Links clicked={props}/>
@@ -36,7 +41,7 @@ export default function Intro() {
                     <div className={`button-holder ${clicked ? 'flex' : ''}`}>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='about' onClick={e => handleNav(e)}>About Me</button>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='proj' onClick={e => handleNav(e)}>Projects</button>
-                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value={nav} onClick={e => handleNav(e)}>Salesforce</button>
+                        {/* <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='sales' onClick={e => handleNav(e)}>Salesforce</button> */}
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='contact' onClick={e => handleNav(e)}>Links</button>
                     </div>)
             }, '300')

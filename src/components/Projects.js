@@ -3,10 +3,11 @@ import SlideOne from "./SlideOne";
 import { slideData } from "./slideData";
 import { motion } from "framer-motion";;
 
-export default function Projects() {
+export default function Projects({clicked}) {
     let [activeSlide, setActiveSlide] = useState(0)
     let [data, setData] = useState(slideData)
     let [direction, setDirection] = useState(0)
+    console.log(clicked)
 
     
     const next = (e) => {
@@ -36,13 +37,13 @@ export default function Projects() {
                 
                 <div className='navButton prev'onClick={e => prev(e)}><div>{'<'}</div></div>
                 <div className='navButton next'onClick={e => next(e)}><div>{'>'}</div></div>
-                <div className='slider-grid-container'>
+                <div className={`slider-grid-container ${clicked ? '' : 'hidden'}`}>
                     <motion.div
-                    animate={{x: `${direction + '%'}` }}
+                    animate={{x: `${direction + '%'}`}}
                     transition={{
                         ease:"linear", duration: .8
                     }}
-                    className='slider-grid' 
+                    className={`slider-grid`}
                     >
                         {data.map((slide, index) => {
                             return(
