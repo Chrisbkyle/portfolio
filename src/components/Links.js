@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 export default function Links({clicked}) {
-    console.log(clicked)
+    // console.log(clicked)
     return(
         <div className={`text contact ${clicked ? '' : 'hidden'}`}>
             <h2>Links and Contact</h2>

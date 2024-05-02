@@ -1,52 +1,62 @@
 import React, {useState, useEffect} from "react";
 import SlideOne from "./SlideOne";
 import SlideTwo from "./SlideTwo";
+import { slideData } from "./slideData";
+import ofland from '../resources/recipeselect laptop.png'
+import ofport from '../resources/recipebuilder tablet.png'
 
 export default function Projects() {
-    let [slide, setSlide] = useState(0)
-    let [data, setDate] = useState([
-        {name: 'office Chef', desc: 'responsive web app'}, 
-        {name: 'local weather', desc: 'tracking your local forcast'}, 
-        {name: 'Pomodoro', desc: 'productivity assistant'}
-    ])
+    let [activeSlide, setActiveSlide] = useState(0)
+    let [data, setData] = useState(slideData)
     let [direction, setDirection] = useState('')
 
 
+    // slideData.map((slide, i) => console.log(slide, i))
+    // console.log(slideData)
+
+    const slideRender = () => {
+        return <SlideOne 
+                data={data[activeSlide]}
+                name={data[activeSlide].name}
+                desc={data[activeSlide].desc}
+                land={data[activeSlide].imgLandscape}
+                port={data[activeSlide].imgPortrait}
+                icon={data[activeSlide].imgIcon}
+        
+        />
+    }
+   
 
     
-    const handleRightNav = (e) => {
+    const next = (e) => {
         setDirection('right')
-        if (slide == data.length - 1) {
-            setSlide(0)
+        if (activeSlide == data.length - 1) {
+            setActiveSlide(0)
         } else {
-            setSlide((slide) => slide + 1)
+            setActiveSlide((slide) => slide + 1)
         }
     }
-    const handleLeftNav = (e) => {
+    const prev = (e) => {
         setDirection('left')
-        if (slide == 0) {
-            setSlide(data.length - 1) 
+        if (activeSlide == 0) {
+            setActiveSlide(data.length - 1) 
         } else {
-            setSlide((slide) => slide - 1)
+            setActiveSlide((slide) => slide - 1)
         }
     }
     useEffect(() => {
-        
     })
 
  
     return(
         <div className='text'>
-            {/* <div>Projects will go here</div> */}
-            <div>
-                {/* <div className='rotate-container'>
-                    <div className='rotate'>{data[slide].name}</div>
-                </div>
-                <button value='left' onClick={e => handleLeftNav(e)}>left</button>
-                <button value='right' onClick={e => handleRightNav(e)}>right</button>
-                <div>slide is {slide}</div> */}
-                <SlideOne />
-                <SlideTwo />
+            {/* <div>Projects</div> */}
+            <div className='sliderHolder'>
+                
+                <div className='navButton prev'onClick={e => prev(e)}><div>{'<'}</div></div>
+                <div className='navButton next'onClick={e => next(e)}><div>{'>'}</div></div>
+                
+                {slideRender(activeSlide)}
             </div>
         </div>
     )

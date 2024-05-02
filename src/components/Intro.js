@@ -13,13 +13,13 @@ export default function Intro() {
 
     const pageRender = (props) => {
         if(nav == 'about') {
-            console.log(nav)
+            // console.log(nav)
             return <Description clicked={props}/>
         } else if(nav == 'proj') {
-            console.log(nav)
+            // console.log(nav)
             return <Projects />
         } else if(nav =='contact') {
-            console.log(nav)
+            // console.log(nav)
             return <Links clicked={props}/>
         } else {
             return
