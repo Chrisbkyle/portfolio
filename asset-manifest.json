@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.8e616131.css",
+    "main.js": "/portfolio/static/js/main.ca1eebcf.js",
+    "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/Chris.png": "/portfolio/static/media/Chris.584643994ba0cccf581f.png",
+    "static/media/sf 1.png": "/portfolio/static/media/sf 1.9e99caf38163eaa44365.png",
+    "static/media/chef hat.png": "/portfolio/static/media/chef hat.cff16bcbf5b7ba163f31.png",
+    "static/media/Weather-Hourly 1.png": "/portfolio/static/media/Weather-Hourly 1.d4c40676e57b54b56c2a.png",
+    "static/media/recipeselect laptop.png": "/portfolio/static/media/recipeselect laptop.ddd495fca795dd411d87.png",
+    "static/media/Weather-seven 1.png": "/portfolio/static/media/Weather-seven 1.b3f60a50b2f7056f351a.png",
+    "static/media/recipebuilder tablet.png": "/portfolio/static/media/recipebuilder tablet.5d8e5c4c6d9fbfad631e.png",
+    "index.html": "/portfolio/index.html",
+    "main.8e616131.css.map": "/portfolio/static/css/main.8e616131.css.map",
+    "main.ca1eebcf.js.map": "/portfolio/static/js/main.ca1eebcf.js.map",
+    "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e616131.css",
+    "static/js/main.ca1eebcf.js"
+  ]
+}
