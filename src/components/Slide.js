@@ -3,7 +3,7 @@ import github from '../resources/github-mark.png'
 import { motion } from "framer-motion";
 
 
-export default function SlideOne({data, name, desc, land, port, icon, repo, website}) {
+export default function Slide({data, name, desc, land, port, icon, repo, website}) {
 
     return (
         <>

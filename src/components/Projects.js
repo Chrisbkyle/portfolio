@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import SlideOne from "./SlideOne";
+import Slide from "./Slide";
 import { slideData } from "./slideData";
 import { motion } from "framer-motion";;
 
@@ -32,22 +32,23 @@ export default function Projects({clicked}) {
 
  
     return(
-        <div className='text'>
-            <div>
+        <div className='slider-grid-container'>
+            {/* <div> */}
                 
-                <div className='navButton prev'onClick={e => prev(e)}><div>{'<'}</div></div>
-                <div className='navButton next'onClick={e => next(e)}><div>{'>'}</div></div>
-                <div className={`slider-grid-container ${clicked ? '' : 'hidden'}`}>
+                <div className='slider-button prev'onClick={e => prev(e)}><div>{'<'}</div></div>
+                <div className='slider-button next'onClick={e => next(e)}><div>{'>'}</div></div>
+                <div className={`slider-grid ${clicked ? '' : 'hidden'}`}>
                     <motion.div
                     animate={{x: `${direction + '%'}`}}
                     transition={{
-                        ease:"linear", duration: .8
+                        ease:'easeInOut', duration: .8
+                        // ease:"linear", duration: .8
                     }}
-                    className={`slider-grid`}
+                    className='slide'
                     >
                         {data.map((slide, index) => {
                             return(
-                            <SlideOne 
+                            <Slide 
                             data={slide}
                             name={slide.name}
                             desc={slide.desc}
@@ -59,7 +60,7 @@ export default function Projects({clicked}) {
                         )})}
                     </motion.div>
                 </div>
-            </div>
+            {/* </div> */}
         </div>
     )
 }

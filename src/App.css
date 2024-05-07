@@ -119,6 +119,10 @@ html {
   font-size: 50px;
   transition-duration: 1s;
 }
+.nav-button-holder-expanded {
+  display: flex;
+  width: 750px;
+}
 .nav-button-expanded {
   height: 50px;
   width: 150px;
@@ -140,8 +144,14 @@ html {
   height: 480px;
 }
 
+/*
+  Projects.js
+*/
 
 .slider-grid-container {
+  position: relative;
+}
+.slider-grid {
   transition-duration: 1s;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -149,10 +159,39 @@ html {
   height: 480px;
   overscroll-behavior-inline: contain;
 }
-.slider-grid {
+.slide {
   display: grid;
   grid-auto-flow: column;
 }
+.slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  opacity: 50%;
+  height: 450px;
+  color: black;
+}
+.slider-button:hover {
+  transition-duration: .5s;
+  background-color: #6F7C80;
+  opacity: 50%;
+}
+.prev {
+  left: 0;
+  z-index: 5;
+  border-radius: 5px 0 0 5px;
+}
+.next {
+  right: 0;
+  z-index: 5;
+  border-radius: 0 5px 5px 0;
+}
+
+/*
+  Slide.js
+*/
+
 .project-slide {
   z-index: 1;
   position: relative;
@@ -228,30 +267,9 @@ html {
 .project-button-holder > a:visited {
   color: black
 }
-.navButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  opacity: 50%;
-  height: 450px;
-  color: black;
-}
-.navButton:hover {
-  transition-duration: .5s;
-  background-color: #6F7C80;
-  opacity: 50%;
-}
-.prev {
-  left: 0;
-  z-index: 5;
-  border-radius: 5px 0 0 5px;
-}
-.next {
-  right: 0;
-  z-index: 5;
-  border-radius: 0 5px 5px 0;
-}
+/*
+    Contact.js
+*/
 .contact {
   transition-duration: 1s;
   font-size: 30px;
@@ -260,6 +278,13 @@ html {
   line-height: 50px;
   height: 480px;
 }
+.link-img {
+  width: 100px;
+  transition-duration: 1s;
+}
+/*
+    SendEmail.js
+*/
 .email-form {
   display: flex;
   flex-direction: column;
@@ -271,17 +296,6 @@ html {
   width: 100px;
 }
 
-/* Intro.js, */
-.flex {
-  display: flex;
-  width: 750px;
-}
-/* Description.js Projects.js Links.js*/
-.text {
-  position: relative;
-  height: 480px;
-}
-
 
 .hidden {
   transition-duration: 1s;
@@ -290,9 +304,13 @@ html {
   height: 0px;
   width: 0px;
 }
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hidden-img {
+  transition-duration: 1s;
+  /* transition-delay: 1s; */
+  height: 0px;
+  width: 0px;
 }
- 
+
+.border {
+  border: 1px solid white;
+}

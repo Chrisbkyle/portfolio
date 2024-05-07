@@ -10,13 +10,11 @@ export default function Links({clicked}) {
         <div className={`text contact ${clicked ? '' : 'hidden'}`}>
             <h2>Links and Contact</h2>
             <div style={{paddingLeft: '30px'}}>
-                <div><a href='https://www.linkedin.com/in/chris-kyle-727491270'><img src={linkedin} width='100px'></img></a> - Let's Connect</div>
-                <div><a href='https://github.com/Chrisbkyle'><img src={githubWhite} width='100px'></img></a> - Come check out my code, feedback welcome!</div>
-                <div><a href='https://github.com/Chrisbkyle'><img src={githubBlack} width='100px'></img></a> - Come check out my code, feedback welcome!</div>
-                {/* <div><a href='https://www.salesforce.com/trailblazer/chriskylexy2lzwtlb2cz'>Trailhead Page</a> 100+ Salesforce Badges & 18 Superbadges</div> */}
-                {/* <div><a href='mailto:christopher.b.kyle@gmail.com'>Email</a> - Pop me an email @ christopher.b.kyle@gmail.com</div> */}
+                <div className='border'><a href='https://www.linkedin.com/in/chris-kyle-727491270'><img src={linkedin} className={`border ${clicked ? 'link-img' : 'hidden-img'}`}></img></a> - Let's Connect</div>
+                <div className='border'><a href='https://github.com/Chrisbkyle'><img src={githubWhite} className={`border ${clicked ? 'link-img' : 'hidden-img'}`}></img></a> - Come check out my code, feedback welcome!</div>
+                <div className='border'><a href='https://github.com/Chrisbkyle'><img src={githubBlack} className={`border ${clicked ? 'link-img' : 'hidden-img'}`}></img></a> - Come check out my code, feedback welcome!</div>
                 <div>Email @ christopher.b.kyle@gmail.com</div>
-                {/* <SendEmail /> */}
+                <SendEmail />
             </div>
         </div>
     )

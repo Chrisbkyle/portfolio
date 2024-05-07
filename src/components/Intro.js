@@ -38,7 +38,7 @@ export default function Intro() {
         if(clicked) {
             setTimeout(() => {
                 setTestState(                    
-                    <div className={`nav-button-holder ${clicked ? 'flex' : ''}`}>
+                    <div className={`nav-button-holder ${clicked ? 'nav-button-holder-expanded' : ''}`}>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='about' onClick={e => handleNav(e)}>About Me</button>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='proj' onClick={e => handleNav(e)}>Projects</button>
                         {/* <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='sales' onClick={e => handleNav(e)}>Salesforce</button> */}
