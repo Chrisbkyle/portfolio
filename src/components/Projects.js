@@ -53,7 +53,9 @@ export default function Projects({clicked}) {
                             desc={slide.desc}
                             land={slide.imgLandscape}
                             port={slide.imgPortrait}
-                            icon={slide.imgIcon}/>
+                            icon={slide.imgIcon}
+                            repo={slide.githubLink}
+                            website={slide.websiteLink}/>
                         )})}
                     </motion.div>
                 </div>

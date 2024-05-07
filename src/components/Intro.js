@@ -34,11 +34,11 @@ export default function Intro() {
 
 
     useEffect(() => {
-        // pageRender()
+        pageRender()
         if(clicked) {
             setTimeout(() => {
                 setTestState(                    
-                    <div className={`button-holder ${clicked ? 'flex' : ''}`}>
+                    <div className={`nav-button-holder ${clicked ? 'flex' : ''}`}>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='about' onClick={e => handleNav(e)}>About Me</button>
                         <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='proj' onClick={e => handleNav(e)}>Projects</button>
                         {/* <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='sales' onClick={e => handleNav(e)}>Salesforce</button> */}
@@ -70,9 +70,9 @@ export default function Intro() {
 
     return(
         <>
-            <button className='expandButton' onClick={e => handleClick()}>{expandChar}</button>
+            <button className='expand-button' onClick={e => handleClick()}>{expandChar}</button>
             <div className={`grid-container ${clicked ? 'open-grid' : ''}`}>
-                <div className={`hello ${clicked ? 'helloExpand': ''}`}>
+                <div className={`hello ${clicked ? 'hello-expand': ''}`}>
                     <div>Hello, My Name is Chris Kyle,</div>
                     <div> Welcome to my Portfolio Page</div>
                 </div>

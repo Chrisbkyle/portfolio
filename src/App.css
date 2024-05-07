@@ -3,11 +3,14 @@ html {
   max-width: 95%;
 }
 
+
 /*
-    Toggle Button
+    Intro.js
 */
 
-.expandButton{ 
+/* Toggle Button */
+
+.expand-button{ 
   background-color: #282c34;
   font-size: 50px;
   color: #6F7C80;
@@ -16,9 +19,7 @@ html {
   width: 100px;
 }
 
-/*
-    Main Everything Container
-*/
+/* Main Everything Container */
 
 .grid-container {
   display: grid;
@@ -38,9 +39,8 @@ html {
   margin: 20px 0;
   height: 600px;
 }
-/*
-    Introduction Large size
-*/
+
+/* Introduction */
 
 .hello {
   display: block;
@@ -49,30 +49,24 @@ html {
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
   transition-duration: 1s;
-  /* border: 2px solid white; */
   background: linear-gradient(.25turn, #F2F3F4, #6F7C80);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
-/*
-    Introduction Expanded
-*/
-
-.helloExpand {
+.hello-expand {
   font-size: 25px;
   transition-duration: 1s;
 }
 
-/*
-    Image Container and img
-*/
-.imageCont {
+/* Image Container and img */
+
+/* .imageCont {
   height: 0px;
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
-  /* border: 2px solid white; */
-}
+  border: 2px solid white;
+} */
 .profile-pic {
   display: block;
   margin: auto;
@@ -80,18 +74,13 @@ html {
   transition-duration: 1s;
   border-radius: 50%;
 }
-/*
-    Image Container and img Expanded
-*/
 
 .pic-expand {
   display: block;
   height: 300px;
   margin: auto;
 }
-/*
-    Main Content Holder(description, projects, contact)
-*/
+/* Main Content Holder(description, projects, contact) */
 .content {
   display: flex;
   flex-direction: column;
@@ -104,7 +93,7 @@ html {
   font-size: 0px;
   transition-duration: 1s;
 }
-.button-holder {
+.nav-button-holder {
   display: none;
   width: 50px;
   gap: 50px;
@@ -137,10 +126,11 @@ html {
   transition-delay: .4s;
   transition-duration: 1s;
 }
-.text {
-  position: relative;
-  height: 480px;
-}
+
+/*
+  Description.js
+*/
+
 .description {
   transition-duration: 1s;
   font-size: 30px;
@@ -149,14 +139,8 @@ html {
   min-width: 1000px;
   height: 480px;
 }
-.contact {
-  transition-duration: 1s;
-  font-size: 30px;
-  max-width: 1150px;
-  min-width: 1000px;
-  line-height: 50px;
-  height: 480px;
-}
+
+
 .slider-grid-container {
   transition-duration: 1s;
   overflow-x: hidden;
@@ -237,11 +221,11 @@ html {
   border-radius: 5px;
   transition-duration: 1s;
 }
-.project-button > a {
+.project-button-holder > a {
   text-decoration: none;
 }
 
-.project-button > a:visited {
+.project-button-holder > a:visited {
   color: black
 }
 .navButton {
@@ -268,16 +252,43 @@ html {
   z-index: 5;
   border-radius: 0 5px 5px 0;
 }
+.contact {
+  transition-duration: 1s;
+  font-size: 30px;
+  max-width: 1150px;
+  min-width: 1000px;
+  line-height: 50px;
+  height: 480px;
+}
+.email-form {
+  display: flex;
+  flex-direction: column;
+}
+.form-input {
+  width: 50%;
+}
+.form-button {
+  width: 100px;
+}
+
+/* Intro.js, */
+.flex {
+  display: flex;
+  width: 750px;
+}
+/* Description.js Projects.js Links.js*/
+.text {
+  position: relative;
+  height: 480px;
+}
+
+
 .hidden {
   transition-duration: 1s;
   font-size: 0px!important;
   line-height: 0px;
   height: 0px;
   width: 0px;
-}
-.flex {
-  display: flex;
-  width: 750px;
 }
 .center {
   display: flex;

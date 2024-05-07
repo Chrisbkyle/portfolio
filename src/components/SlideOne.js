@@ -3,7 +3,7 @@ import github from '../resources/github-mark.png'
 import { motion } from "framer-motion";
 
 
-export default function SlideOne({data, name, desc, land, port, icon}) {
+export default function SlideOne({data, name, desc, land, port, icon, repo, website}) {
 
     return (
         <>
@@ -20,8 +20,8 @@ export default function SlideOne({data, name, desc, land, port, icon}) {
                 {/* <div className='project-description-text'>Made using React, NodeJS/Express, mySQL and deployed on AWS EC2</div> */}
                 {/* <div className='project-description-text'>To log in, please create an account</div> */}
                 <div className='project-button-holder'>
-                    <div className='project-button'><img src={github} height='25px'></img><a href='http://www.google.com'>Code</a></div>
-                    <div className='project-button'><img src={require(`../resources${icon}`)} height='25px'></img><a href='http://www.google.com'>Website</a></div>
+                    <a href={repo}><div className='project-button'><img src={github} height='25px'></img>Code</div></a>
+                    <a href={website}><div className='project-button'><img src={require(`../resources${icon}`)} height='25px'></img>Website</div></a>
                 </div>
             </div>
             </div>
