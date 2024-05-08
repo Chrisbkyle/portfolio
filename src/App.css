@@ -268,11 +268,8 @@ html {
   height: 480px;
 }
 .link-img {
-  /* display: flex; */
   width: 100px;
   min-height: 45px;
-  /* padding: auto; */
-  /* margin: auto; */
   transition-duration: 1s;
 }
 /*
@@ -282,13 +279,25 @@ html {
   display: flex;
   flex-direction: column;
 }
-.form-text {
+.form-table {
+  border-spacing: 5px;
   font-size: 24px;
+  width: 100%;
 }
 .form-input {
+  font-size: 24px;
   width: 100%;
-  font-size:20px;
   height: 40px;
+  background-color: #6F7C80;
+  color: black;
+  border-radius: 5px;
+}
+.form-input::placeholder {
+  color: black;
+  font-family:Arial, Helvetica, sans-serif
+}
+textarea {
+  resize: none;
 }
 .form-button {
   font-size: 24px;
