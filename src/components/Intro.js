@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import Description from './Descripton'
 import Projects from './Projects';
 import Links from './Links';
-import Salesforce from "./Salesforce";
+import Footer from './Footer'
 import Chris from '../resources/Chris.png'
 
 export default function Intro() {
@@ -38,11 +38,11 @@ export default function Intro() {
         if(clicked) {
             setTimeout(() => {
                 setTestState(                    
-                    <div className={`nav-button-holder ${clicked ? 'nav-button-holder-expanded' : ''}`}>
-                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='about' onClick={e => handleNav(e)}>About Me</button>
-                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='proj' onClick={e => handleNav(e)}>Projects</button>
+                    <div className={`nav-button-holder ${clicked ? '' : 'hidden'}`}>
+                        <button className={`button nav-button ${clicked ? '' : 'hidden'}`} value='about' onClick={e => handleNav(e)}>About Me</button>
+                        <button className={`button nav-button ${clicked ? '' : 'hidden'}`} value='proj' onClick={e => handleNav(e)}>Projects</button>
                         {/* <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='sales' onClick={e => handleNav(e)}>Salesforce</button> */}
-                        <button className={`nav-button ${clicked ? 'nav-button-expanded' : ''}`} value='contact' onClick={e => handleNav(e)}>Links</button>
+                        <button className={`button nav-button ${clicked ? '' : 'hidden'}`} value='contact' onClick={e => handleNav(e)}>Links</button>
                     </div>)
             }, '300')
         } else {
@@ -83,6 +83,7 @@ export default function Intro() {
                     {testState}
                 </div>
             </div>
+            <Footer clicked={clicked} />
         </>
     )
 }

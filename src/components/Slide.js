@@ -20,8 +20,8 @@ export default function Slide({data, name, desc, land, port, icon, repo, website
                 {/* <div className='project-description-text'>Made using React, NodeJS/Express, mySQL and deployed on AWS EC2</div> */}
                 {/* <div className='project-description-text'>To log in, please create an account</div> */}
                 <div className='project-button-holder'>
-                    <a href={repo}><div className='project-button'><img src={github} height='25px'></img>Code</div></a>
-                    <a href={website}><div className='project-button'><img src={require(`../resources${icon}`)} height='25px'></img>Website</div></a>
+                    <a href={repo}><div className='button project-button'><img src={github} height='25px'></img>Code</div></a>
+                    <a href={website}><div className='button project-button'><img src={require(`../resources${icon}`)} height='25px'></img>Website</div></a>
                 </div>
             </div>
             </div>

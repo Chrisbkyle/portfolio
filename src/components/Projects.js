@@ -35,8 +35,8 @@ export default function Projects({clicked}) {
         <div className='slider-grid-container'>
             {/* <div> */}
                 
-                <div className='slider-button prev'onClick={e => prev(e)}><div>{'<'}</div></div>
-                <div className='slider-button next'onClick={e => next(e)}><div>{'>'}</div></div>
+                <div className='change-slide prev'onClick={e => prev(e)}><div>{'<'}</div></div>
+                <div className='change-slide next'onClick={e => next(e)}><div>{'>'}</div></div>
                 <div className={`slider-grid ${clicked ? '' : 'hidden'}`}>
                     <motion.div
                     animate={{x: `${direction + '%'}`}}
